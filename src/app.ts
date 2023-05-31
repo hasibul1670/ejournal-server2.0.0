@@ -15,6 +15,7 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
+
 app.use(express.json());
 
 
@@ -33,7 +34,7 @@ app.use(morgan("dev"));
 
 //client error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
-  next(createHttpError(404, "Route not found !!  404"));
+  next(createHttpError(404, "Route not found !!  404 😭"));
 });
 
 
