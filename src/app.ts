@@ -27,7 +27,7 @@ app.use(morgan("dev"));
 
 
 
-                          app.get("/", (req: Request, res: Response) => {
+                         app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Ejournal Server");
 });
 
