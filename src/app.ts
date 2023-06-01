@@ -22,17 +22,9 @@ app.use(limiter)
 
 app.use(morgan('dev'))
 
-app.get(
-  '/',
-  (
-    req: Request,
-
-    res: Response
-  ) => {
-    res.send('Welcome to Ejournal Server')
-  }
-)
-
+app.get('/', (req: Request, res: Response) => {
+  res.send('Welcome to Ejournal Server')
+})
 //client error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(createHttpError(404, 'Route not found !!  404 😭'))
