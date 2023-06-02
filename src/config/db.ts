@@ -9,6 +9,7 @@ export const connectDB = async (options = {}) => {
       console.error('DB connection error', err)
     })
   } catch (err: any) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     console.log('could not connect to Mongo', err.toString())
   }
 }
